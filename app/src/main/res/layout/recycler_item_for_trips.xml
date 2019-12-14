@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="3dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="2dp"
+        app:cardCornerRadius="5dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <RelativeLayout
+                android:id="@+id/rlayout1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rl_from"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/img_up"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentLeft="true"
+                    android:scaleType="fitXY"
+                    android:background="@drawable/up_arrow"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/ll_from"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_toRightOf="@id/img_up">
+                  <TextView
+                    android:id="@+id/tv_from"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="source"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/img_up"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18dp"/>
+
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:id="@+id/tv_from_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="source"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/img_up"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/tv_from"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="15dp"/>
+                </LinearLayout>
+
+
+
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/tv_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total:"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="15dp"/>
+
+
+                <TextView
+                    android:id="@+id/tv_currency_symbol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="t"
+                    android:layout_toLeftOf="@id/tv_value"
+                    android:layout_marginLeft="10dp"
+                    android:textStyle="bold"
+                    android:layout_above="@id/tv_trip_duration"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="20dp"/>
+
+
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:id="@+id/tv_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="161"
+                    android:textStyle="bold"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_below="@id/tv_total"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="45dp"/>
+
+                <TextView
+                    android:id="@+id/tv_trip_duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Travel Time: 2h 35min"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@+id/tv_value"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="15dp"/>
+
+                <ImageView
+                    android:id="@+id/img_track"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:backgroundTint="@color/colorWhite"
+                    android:layout_alignParentLeft="true"
+                    android:scaleType="fitXY"
+                    android:layout_below="@id/rl_from"
+                    android:background="@drawable/ellipsis"
+                    />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/img_track">
+                <ImageView
+                    android:id="@+id/img_down"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentLeft="true"
+                    android:scaleType="fitXY"
+                    android:background="@drawable/down_arrow"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/ll_to"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_toRightOf="@id/img_down">
+                    <TextView
+                        android:id="@+id/tv_to"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="source"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/img_down"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="18dp"/>
+
+                    <TextView
+                        android:layout_centerVertical="true"
+                        android:id="@+id/tv_to_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="source"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/img_down"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@+id/tv_from"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="15dp"/>
+                </LinearLayout>
+
+
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/colorPrimaryDark">
+
+          <RelativeLayout
+                android:id="@+id/originalToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary">
+
+              <RelativeLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:id="@+id/toolbar">
+                <ImageView
+                    android:id="@+id/tv_back"
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/colorWhite"
+                    android:background="@drawable/ic_keyboard_arrow_left_black_24dp"
+                    android:backgroundTint="@color/colorWhite"
+                    android:layout_marginRight="10dp" />
+
+
+                <TextView
+                    android:id="@+id/txtTitleBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/profile"
+                    android:paddingLeft="10dp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/toolbarText"
+                    android:visibility="visible" />
+
+
+                <ImageView
+                    android:id="@+id/btn_openDrawer"
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:backgroundTint="@color/colorWhite"
+                    android:background="@drawable/ic_more_horiz_black_24dp"
+                    />
+              </RelativeLayout>
+
+              <RelativeLayout
+                    android:id="@+id/person_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/toolbar"
+                    android:layout_marginTop="@dimen/padding_20"
+                    android:paddingLeft="@dimen/padding_20"
+                    android:paddingRight="@dimen/padding_20">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/profile_pic"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:src="@drawable/ic_launcher_background"
+                        android:scaleType="centerCrop"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Canada"
+                        android:id="@+id/name"
+                        android:layout_toRightOf="@id/profile_pic"
+                        android:layout_marginTop="10dp"
+                        android:gravity="left"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorTextWhite"
+                        android:layout_marginBottom="5dp"
+                        android:textSize="20sp"
+                        android:layout_marginLeft="15dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Canada"
+                        android:id="@+id/address"
+                        android:layout_toRightOf="@id/profile_pic"
+                        android:layout_below="@+id/name"
+                        android:gravity="left"
+                        android:textStyle="normal"
+                        android:textColor="@color/colorTextWhite"
+                        android:layout_marginBottom="5dp"
+                        android:textSize="16sp"
+                        android:layout_marginLeft="15dp"/>
+
+                </RelativeLayout>
+
+              <RelativeLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:padding="5dp"
+                  android:layout_below="@id/person_info">
+
+                  <RelativeLayout
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical"
+                      android:layout_centerVertical="true"
+                      android:layout_alignParentLeft="true">
+
+                      <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="Rides"
+                          android:id="@+id/rides"
+                          android:layout_marginTop="10dp"
+                          android:gravity="left"
+                          android:textStyle="bold"
+                          android:textColor="@color/colorTextWhite"
+                          android:layout_marginBottom="5dp"
+                          android:textSize="14sp"
+                          android:textAllCaps="true"
+                          android:layout_marginLeft="15dp"/>
+
+                      <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="67"
+                          android:id="@+id/rides_count"
+                          android:layout_below="@+id/rides"
+                          android:gravity="left"
+                          android:textStyle="normal"
+                          android:textColor="@color/colorTextWhite"
+                          android:layout_marginBottom="5dp"
+                          android:textSize="35sp"
+                          android:layout_marginLeft="15dp"/>
+
+                  </RelativeLayout>
+
+                  <RelativeLayout
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical"
+                      android:padding="5dp"
+                      android:layout_centerVertical="true"
+                      android:layout_centerInParent="true">
+
+                      <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="Free Rides"
+                          android:id="@+id/free_rides"
+                          android:layout_marginTop="10dp"
+                          android:gravity="left"
+                          android:textStyle="bold"
+                          android:textColor="@color/colorTextWhite"
+                          android:layout_marginBottom="5dp"
+                          android:textSize="14sp"
+                          android:textAllCaps="true"
+                          android:layout_marginLeft="15dp"/>
+
+                      <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="67"
+                          android:id="@+id/freerides_count"
+                          android:layout_below="@+id/free_rides"
+                          android:gravity="left"
+                          android:textStyle="normal"
+                          android:textColor="@color/colorTextWhite"
+                          android:layout_marginBottom="5dp"
+                          android:textSize="35sp"
+                          android:layout_marginLeft="15dp"/>
+
+                  </RelativeLayout>
+
+                  <RelativeLayout
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical"
+                      android:padding="5dp"
+                      android:layout_centerVertical="true"
+                      android:layout_marginRight="@dimen/padding_20"
+                      android:layout_alignParentRight="true">
+
+                      <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="Credits"
+                          android:id="@+id/credits"
+                          android:layout_marginTop="10dp"
+                          android:gravity="left"
+                          android:textStyle="bold"
+                          android:textColor="@color/colorTextWhite"
+                          android:layout_marginBottom="5dp"
+                          android:textSize="14sp"
+                          android:textAllCaps="true"
+                          android:layout_marginLeft="15dp"/>
+
+                      <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="67"
+                          android:id="@+id/credits_count"
+                          android:layout_below="@+id/credits"
+                          android:gravity="left"
+                          android:textStyle="normal"
+                          android:textColor="@color/colorTextWhite"
+                          android:layout_marginBottom="5dp"
+                          android:textSize="35sp"
+                          android:layout_marginLeft="15dp"/>
+
+                  </RelativeLayout>
+
+              </RelativeLayout>
+            </RelativeLayout>
+
+    <!--endregion-->
+
+    <ScrollView
+        android:id="@+id/ScrollView01"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        android:layout_below="@id/originalToolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <!--region TITLE -->
+                <RelativeLayout
+                    android:padding="10dp"
+                    android:id="@+id/layout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                       <TextView
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                           android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Past Trips"
+                           android:textStyle="bold"
+                           android:textColor="@color/colorTextWhite"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="See All"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="15dp" />
+
+                </RelativeLayout>
+                <!--endregion-->
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/layout1"
+                    android:background="@color/colorPrimary"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
