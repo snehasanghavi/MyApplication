@@ -5,8 +5,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 
@@ -19,6 +22,7 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.MyViewHolder
 
     private LayoutInflater inflater;
     private ArrayList<ItemModel> imageModelArrayList;
+
 
     public ItemsAdapter(Context ctx, ArrayList<ItemModel> imageModelArrayList){
 
@@ -38,8 +42,14 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.MyViewHolder
     @Override
     public void onBindViewHolder(ItemsAdapter.MyViewHolder holder, int position) {
 
-        holder.tv_currency_symbol.setText(Integer.parseInt(imageModelArrayList.get(position).getCurrency_symbol()));
-        holder.tv_value.setText(imageModelArrayList.get(position).getValue());
+        // Picasso.with(this).load("https://randomuser.me/api/portraits/men/78.jpg").into(profile_pic);
+        holder.mTvCurrencySymbol.setText((imageModelArrayList.get(position).getCurrency_symbol()));
+        holder.mTvValue.setText(imageModelArrayList.get(position).getValue());
+        holder.mTvFrom.setText(imageModelArrayList.get(position).getFrom());
+        holder.mTvFromTime.setText(imageModelArrayList.get(position).getFrom_time());
+        holder.mTvTripDuration.setText(imageModelArrayList.get(position).getTrip_duration_in_mins());
+        holder.mTvTo.setText(imageModelArrayList.get(position).getTo());
+        holder.mTvToTime.setText(imageModelArrayList.get(position).getTo_time());
     }
 
     @Override
@@ -47,17 +57,44 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.MyViewHolder
         return imageModelArrayList.size();
     }
 
+    public void initView() {
+    }
+
     class MyViewHolder extends RecyclerView.ViewHolder{
 
-        TextView tv_title,tv_currency_symbol,tv_value;
+      /*  TextView tv_title,tv_currency_symbol,tv_value;
         ImageView img_next, img_types;
+*/
+         private CardView mCardView;
+        private RelativeLayout mRlFrom;
+        private ImageView mImgUp;
+        private LinearLayout mLlFrom;
+        private TextView mTvFrom;
+        private TextView mTvFromTime;
+        private TextView mTvTotal;
+        private TextView mTvCurrencySymbol;
+        private TextView mTvValue;
+        private TextView mTvTripDuration;
+        private ImageView mImgTrack;
+        private ImageView mImgDown;
+        private LinearLayout mLlTo;
+        private TextView mTvTo;
+        private TextView mTvToTime;
 
         public MyViewHolder(View itemView) {
             super(itemView);
 
            // tv_title =  itemView.findViewById(R.id.tv_title);
-            tv_currency_symbol =  itemView.findViewById(R.id.tv_currency_symbol);
-            tv_value =  itemView.findViewById(R.id.tv_value);
+            mTvFrom =  itemView.findViewById(R.id.tv_from);
+            mTvFromTime =  itemView.findViewById(R.id.tv_from_time);
+            mTvTotal =  itemView.findViewById(R.id.tv_total);
+            mTvCurrencySymbol =  itemView.findViewById(R.id.tv_currency_symbol);
+            mTvValue =  itemView.findViewById(R.id.tv_value);
+            mTvTripDuration =  itemView.findViewById(R.id.tv_trip_duration);
+            mTvTo =  itemView.findViewById(R.id.tv_to);
+            mTvToTime =  itemView.findViewById(R.id.tv_to_time);
+
+
         }
 
     }

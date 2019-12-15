@@ -3,22 +3,27 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@color/colorPrimaryDark">
+    android:background="@color/colorPrimary">
 
+         <!--Profile Region-->
           <RelativeLayout
                 android:id="@+id/originalToolbar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/colorPrimary">
+                android:background="@drawable/background_top" >
 
+              <!--Profile Toolbar Region-->
               <RelativeLayout
                   android:layout_width="match_parent"
                   android:layout_height="wrap_content"
                   android:orientation="horizontal"
-                  android:id="@+id/toolbar">
+                  android:id="@+id/toolbar"
+                  android:layout_marginTop="10dp">
+
                 <ImageView
                     android:id="@+id/tv_back"
                     android:layout_width="34dp"
@@ -37,7 +42,7 @@
                     android:layout_centerInParent="true"
                     android:text="@string/profile"
                     android:paddingLeft="10dp"
-                    android:textStyle="bold"
+                    android:textStyle="normal"
                     android:textColor="@android:color/white"
                     android:textSize="@dimen/toolbarText"
                     android:visibility="visible" />
@@ -53,8 +58,11 @@
                     android:backgroundTint="@color/colorWhite"
                     android:background="@drawable/ic_more_horiz_black_24dp"
                     />
-              </RelativeLayout>
 
+              </RelativeLayout>
+                <!--End Region-->
+
+              <!--Personal Information-->
               <RelativeLayout
                     android:id="@+id/person_info"
                     android:layout_width="wrap_content"
@@ -83,7 +91,7 @@
                         android:textStyle="bold"
                         android:textColor="@color/colorTextWhite"
                         android:layout_marginBottom="5dp"
-                        android:textSize="20sp"
+                        android:textSize="16dp"
                         android:layout_marginLeft="15dp"/>
 
                     <TextView
@@ -95,13 +103,15 @@
                         android:layout_below="@+id/name"
                         android:gravity="left"
                         android:textStyle="normal"
-                        android:textColor="@color/colorTextWhite"
+                        android:textColor="@color/colorText"
                         android:layout_marginBottom="5dp"
-                        android:textSize="16sp"
+                        android:textSize="14sp"
                         android:layout_marginLeft="15dp"/>
 
                 </RelativeLayout>
+                <!--End Region-->
 
+              <!--Rides Count-->
               <RelativeLayout
                   android:layout_width="match_parent"
                   android:layout_height="wrap_content"
@@ -123,9 +133,9 @@
                           android:layout_marginTop="10dp"
                           android:gravity="left"
                           android:textStyle="bold"
-                          android:textColor="@color/colorTextWhite"
+                          android:textColor="@color/colorText"
                           android:layout_marginBottom="5dp"
-                          android:textSize="14sp"
+                          android:textSize="10dp"
                           android:textAllCaps="true"
                           android:layout_marginLeft="15dp"/>
 
@@ -147,10 +157,8 @@
                   <RelativeLayout
                       android:layout_width="wrap_content"
                       android:layout_height="wrap_content"
-                      android:orientation="vertical"
-                      android:padding="5dp"
                       android:layout_centerVertical="true"
-                      android:layout_centerInParent="true">
+                      android:layout_centerHorizontal="true">
 
                       <TextView
                           android:layout_width="wrap_content"
@@ -160,11 +168,10 @@
                           android:layout_marginTop="10dp"
                           android:gravity="left"
                           android:textStyle="bold"
-                          android:textColor="@color/colorTextWhite"
+                          android:textColor="@color/colorText"
                           android:layout_marginBottom="5dp"
-                          android:textSize="14sp"
-                          android:textAllCaps="true"
-                          android:layout_marginLeft="15dp"/>
+                          android:textSize="10dp"
+                          android:textAllCaps="true" />
 
                       <TextView
                           android:layout_width="wrap_content"
@@ -176,8 +183,7 @@
                           android:textStyle="normal"
                           android:textColor="@color/colorTextWhite"
                           android:layout_marginBottom="5dp"
-                          android:textSize="35sp"
-                          android:layout_marginLeft="15dp"/>
+                          android:textSize="35sp" />
 
                   </RelativeLayout>
 
@@ -187,8 +193,8 @@
                       android:orientation="vertical"
                       android:padding="5dp"
                       android:layout_centerVertical="true"
-                      android:layout_marginRight="@dimen/padding_20"
-                      android:layout_alignParentRight="true">
+                      android:layout_alignParentRight="true"
+                      android:layout_marginRight="10dp">
 
                       <TextView
                           android:layout_width="wrap_content"
@@ -198,11 +204,12 @@
                           android:layout_marginTop="10dp"
                           android:gravity="left"
                           android:textStyle="bold"
-                          android:textColor="@color/colorTextWhite"
+                          android:layout_alignParentRight="true"
+                          android:textColor="@color/colorText"
                           android:layout_marginBottom="5dp"
-                          android:textSize="14sp"
+                          android:textSize="10dp"
                           android:textAllCaps="true"
-                          android:layout_marginLeft="15dp"/>
+                          />
 
                       <TextView
                           android:layout_width="wrap_content"
@@ -211,37 +218,39 @@
                           android:id="@+id/credits_count"
                           android:layout_below="@+id/credits"
                           android:gravity="left"
+                          android:layout_alignParentRight="true"
                           android:textStyle="normal"
                           android:textColor="@color/colorTextWhite"
                           android:layout_marginBottom="5dp"
-                          android:textSize="35sp"
-                          android:layout_marginLeft="15dp"/>
+                          android:textSize="35sp" />
 
                   </RelativeLayout>
 
               </RelativeLayout>
+              <!--End Region-->
+
             </RelativeLayout>
+        <!--End Region-->
 
-    <!--endregion-->
-
-    <ScrollView
-        android:id="@+id/ScrollView01"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fillViewport="true"
-        android:scrollbars="none"
-        android:layout_below="@id/originalToolbar">
-
-        <LinearLayout
+            <!--All Rides-->
+          <ScrollView
+            android:id="@+id/ScrollView01"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:scrollbars="none"
+            android:layout_below="@id/originalToolbar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
-                <!--region TITLE -->
+                <!--Region TITLE -->
                 <RelativeLayout
                     android:padding="10dp"
                     android:id="@+id/layout1"
@@ -252,11 +261,11 @@
                        <TextView
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="3dp"
-                           android:layout_width="wrap_content"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Past Trips"
-                           android:textStyle="bold"
-                           android:textColor="@color/colorTextWhite"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorTextWhite"
                         android:textSize="15dp" />
 
                     <TextView
@@ -269,20 +278,20 @@
                         android:textSize="15dp" />
 
                 </RelativeLayout>
-                <!--endregion-->
+                <!--End Region-->
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recyclerView"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_below="@+id/layout1"
-                    android:background="@color/colorPrimary"/>
-
+                    android:background="@color/colorPrimaryDark"
+                    />
 
             </LinearLayout>
 
         </LinearLayout>
 
     </ScrollView>
-
+            <!--End egion-->
 </RelativeLayout>
